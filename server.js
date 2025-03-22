@@ -26,7 +26,7 @@ app.post("/analyze", upload.single("image"), async (req, res) => {
           data: base64Image,
         },
       },
-      "Identify the car make and model from this image, and then write a compelling description for selling this car.",
+      "Analizează imaginea, și crează un anunț de postat pe OLX, în care vorbești ca ultimul piețar samsar. Vorbeste gresit gramatical, anainte de prima anmatriculare, chestii de genu, cu k în loc de k, y-uri random, etc",
     ]);
 
     const response = await result.response;
