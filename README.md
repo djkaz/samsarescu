@@ -2,7 +2,7 @@
 
 **Cuprins:**
 
-*   [Ce puteți face pe SamsarGPT?](#Ce-puteți-face-pe-SamsarGPT?)
+*   [Ce puteți face pe SamsarGPT?](#Ce-puteți-face-pe-SamsarGPT?-😎)
 *   [Cum să utilizați site-ul](#cum-sa-utilizati-site-ul)
 *   [Dezvoltări viitoare](#dezvoltari-viitoare)
 *   [Feedback](#feedback)
