@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Description Generator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        text-align: center;
+      }
+      #output {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Upload Car Image</h1>
+    <input type="file" id="carImage" accept="image/*" />
+    <button onclick="upload()">Analyze Car</button>
+    <div id="output"></div>
+
+    <script>
+      async function upload() {
+        const input = document.getElementById("carImage");
+        if (!input.files[0]) {
+          alert("Please upload an image!");
+          return;
+        }
+
+        const formData = new FormData();
+        formData.append("image", input.files[0]);
+
+        document.getElementById("output").textContent = "Analyzing...";
+
+        const res = await fetch("/analyze", {
+          method: "POST",
+          body: formData,
+        });
+
+        const data = await res.json();
+        document.getElementById("output").textContent =
+          data.description || data.error;
+      }
+    </script>
+  </body>
+</html>
