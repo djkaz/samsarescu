@@ -6,7 +6,6 @@ const fs = require("fs");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const config = require("./public/js/config");
 
-
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 const app = express();
@@ -33,7 +32,11 @@ app.post("/analyze", upload.single("image"), async (req, res) => {
   try {
     const { promptText = "", adStyle = "exaggerated" } = req.body;
 
-    if (!['exaggerated', 'desperate', 'luxury', 'honest', 'classic'].includes(adStyle)) {
+    if (
+      !["exaggerated", "desperate", "luxury", "honest", "classic"].includes(
+        adStyle
+      )
+    ) {
       return res.status(400).json({ error: "Invalid adStyle" });
     }
 
@@ -91,7 +94,7 @@ app.post("/repair", upload.single("image"), async (req, res) => {
 
     const contents = [
       {
-        text: "Aceasta este o imagine cu o mașină ruginită. Poți genera o versiune reparată, curată și recondiționată digital?",
+        text: "Păstrează imaginea acestei mașini cât mai similară cu originalul în ceea ce privește modelul, culoarea și unghiul, dar repară-o complet și adu-o în stare perfectă. Vreau să văd exact aceeași mașină, dar fără rugină, fără zgârieturi, cu toate piesele lipsă sau deteriorate înlocuite, vopseaua impecabilă și un aspect general perfect. Asigură-te că se recunoaște că este aceeași mașină, doar într-o stare mult mai bună.",
       },
       {
         inlineData: {
