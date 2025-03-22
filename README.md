@@ -20,7 +20,7 @@ Acesta este un site dedicat oricărui utilizator, dar în special samsarilor aut
 Pe acest site, puteți:
 
 *   **Încărca o mașină:** Încărcați imaginea unei mașini pe care doriți să o vindeți.
-*   **Generează o reclamă:** Sistemul nostru bazat pe [inteligență artificială (AI)](#inteligenta-artificiala) va genera automat o reclamă atractivă pentru mașina dumneavoastră, gata de folosit.
+*   **Generează o reclamă:** Sistemul nostru bazat pe inteligență artificială (AI) va genera automat o reclamă atractivă pentru mașina dumneavoastră, gata de folosit.
 *   **Salvează reclama:** Puteți copia reclama generată de AI pe site-ul nostru sau o puteți distribui.
 
 ## Cum să utilizați site-ul 🚀
