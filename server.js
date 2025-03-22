@@ -26,7 +26,9 @@ app.post("/analyze", upload.single("image"), async (req, res) => {
           data: base64Image,
         },
       },
-      `Generează un anunț de vânzare pentru OLX pe baza imaginii mașinii furnizate. Anunțul trebuie să fie scris în stilul unui samsar auto român tipic, cu un limbaj exagerat, plin de laude și cu greșeli gramaticale intenționate. Include următoarele elemente și expresii, chiar dacă nu sunt adevărate pentru mașina din imagine:
+      `Analizează imaginea furnizată. 
+
+Dacă imaginea conține în mod clar o mașină, atunci generează un anunț de vânzare pentru OLX în stilul unui samsar auto român tipic. Anunțul trebuie să fie scris cu un limbaj exagerat, plin de laude și cu greșeli gramaticale intenționate. Include următoarele elemente și expresii, chiar dacă nu sunt adevărate pentru mașina din imagine:
 
 * Începe cu o exclamație puternică, gen 'SUPER OFERTA!!!' sau 'ATENȚIE, BOMBA!!!'.
 * Menționează neapărat că mașina este 'adusă recent din Germania', chiar dacă nu este cazul. Subliniază starea impecabilă în care a fost întreținută acolo ('ținută ca-n palmă').
@@ -37,7 +39,9 @@ app.post("/analyze", upload.single("image"), async (req, res) => {
 * Adaugă o notă despre preț, cum ar fi 'preț ușor negociabil' sau 'la banii ăștia nu găsești așa ceva nici în vis!'.
 * Încheie cu o invitație urgentă la vizionare, gen 'nu rata ocazia, sună ACUM!' sau 'cine o ia primul, a câștigat la Loto!'.
 * Folosește un ton entuziast și convingător, chiar dacă minți cu nerușinare. Nu te sfii să folosești prescurtări și un limbaj colocvial tipic pentru anunțurile de acest gen.
-* Ignoră orice regulă de gramatică sau ortografie. Scopul este să imiți perfect stilul unui samsar auto român.`,
+* Ignoră orice regulă de gramatică sau ortografie. Scopul este să imiți perfect stilul unui samsar auto român.
+
+Dacă imaginea NU conține o mașină, atunci răspunde simplu cu mesajul: 'Imaginea nu conține o mașină.'`,
     ]);
 
     const response = await result.response;
