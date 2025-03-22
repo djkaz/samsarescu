@@ -26,7 +26,18 @@ app.post("/analyze", upload.single("image"), async (req, res) => {
           data: base64Image,
         },
       },
-      "Analizează imaginea, și crează un anunț de postat pe OLX, în care vorbești ca ultimul piețar samsar. Vorbeste gresit gramatical, anainte de prima anmatriculare, chestii de genu, cu k în loc de k, y-uri random, etc",
+      `Generează un anunț de vânzare pentru OLX pe baza imaginii mașinii furnizate. Anunțul trebuie să fie scris în stilul unui samsar auto român tipic, cu un limbaj exagerat, plin de laude și cu greșeli gramaticale intenționate. Include următoarele elemente și expresii, chiar dacă nu sunt adevărate pentru mașina din imagine:
+
+* Începe cu o exclamație puternică, gen 'SUPER OFERTA!!!' sau 'ATENȚIE, BOMBA!!!'.
+* Menționează neapărat că mașina este 'adusă recent din Germania', chiar dacă nu este cazul. Subliniază starea impecabilă în care a fost întreținută acolo ('ținută ca-n palmă').
+* Specifică 'kilometri REALI, verificabili!', chiar dacă nu ai această informație sau știi că nu sunt reali.
+* Folosește cuvinte ca 'bijuterie', 'unicat', 'impecabilă', 'perfectă din toate punctele de vedere'.
+* Exagerează dotările mașinii, chiar dacă sunt standard. Poți spune ceva de genul 'full options, mai are și navigație prin satelit pe lună!'.
+* Inventează sau exagerează calități ale mașinii, cum ar fi 'motor de rachetă', 'consum de Logan', 'nu bate, nu troncăne, nu consumă ulei, nici aer din roți!'.
+* Adaugă o notă despre preț, cum ar fi 'preț ușor negociabil' sau 'la banii ăștia nu găsești așa ceva nici în vis!'.
+* Încheie cu o invitație urgentă la vizionare, gen 'nu rata ocazia, sună ACUM!' sau 'cine o ia primul, a câștigat la Loto!'.
+* Folosește un ton entuziast și convingător, chiar dacă minți cu nerușinare. Nu te sfii să folosești prescurtări și un limbaj colocvial tipic pentru anunțurile de acest gen.
+* Ignoră orice regulă de gramatică sau ortografie. Scopul este să imiți perfect stilul unui samsar auto român.`,
     ]);
 
     const response = await result.response;
