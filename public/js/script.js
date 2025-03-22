@@ -21,6 +21,7 @@ document.getElementById("carForm").addEventListener("submit", async (e) => {
   document.getElementById("emptyState").classList.add("hidden");
   document.getElementById("resultContent").classList.add("hidden");
   document.getElementById("loadingState").classList.remove("hidden");
+  document.getElementById("repairedImageCard").style.display = "none";
 
   try {
     const response = await fetch("/analyze", {
@@ -36,6 +37,20 @@ document.getElementById("carForm").addEventListener("submit", async (e) => {
 
       document.getElementById("loadingState").classList.add("hidden");
       document.getElementById("resultContent").classList.remove("hidden");
+
+      // Fetch the repaired image
+      const repairedResp = await fetch("/repair", {
+        method: "POST",
+        body: formData,
+      });
+
+      const repairedData = await repairedResp.json();
+
+      if (repairedData?.repairedImage) {
+        const repairedPreview = document.getElementById("repairedPreview");
+        repairedPreview.src = `data:image/jpeg;base64,${repairedData.repairedImage}`;
+        document.getElementById("repairedImageCard").style.display = "block";
+      }
     } else {
       throw new Error("Fără descriere returnată!");
     }
@@ -46,7 +61,7 @@ document.getElementById("carForm").addEventListener("submit", async (e) => {
   }
 });
 
-// Optional: preview image
+// Preview image logic
 document.getElementById("carImage").addEventListener("change", function () {
   const file = this.files[0];
   const preview = document.getElementById("previewImg");

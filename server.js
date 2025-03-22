@@ -114,6 +114,47 @@ Dacă imaginea NU conține o mașină, răspunde cu: 'Vere asta nu-i mașină, c
   }
 });
 
+app.post("/repair", upload.single("image"), async (req, res) => {
+  try {
+    const imageBuffer = fs.readFileSync(req.file.path);
+    const base64Image = imageBuffer.toString("base64");
+
+    const model = genAI.getGenerativeModel({
+      model: "gemini-2.0-flash-exp-image-generation",
+      generationConfig: {
+        responseModalities: ["Text", "Image"],
+      },
+    });
+
+    const contents = [
+      {
+        text: "Aceasta este o imagine cu o mașină ruginită. Poți genera o versiune reparată, curată și recondiționată digital?",
+      },
+      {
+        inlineData: {
+          mimeType: "image/jpeg",
+          data: base64Image,
+        },
+      },
+    ];
+
+    const result = await model.generateContent(contents);
+    const parts = result.response.candidates?.[0]?.content?.parts;
+
+    const imagePart = parts?.find((p) => p.inlineData && p.inlineData.data);
+
+    if (!imagePart) throw new Error("No image data returned.");
+
+    const repairedImageBase64 = imagePart.inlineData.data;
+
+    res.json({ repairedImage: repairedImageBase64 });
+    fs.unlinkSync(req.file.path);
+  } catch (err) {
+    console.error("Repair image failed:", err);
+    res.status(500).json({ error: "Failed to repair image." });
+  }
+});
+
 app.listen(3000, () =>
   console.log("🚀 Server running at http://localhost:3000")
 );

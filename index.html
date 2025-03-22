@@ -198,51 +198,68 @@
             </div>
 
             <!-- Result -->
-            <div class="generator-result-container">
-              <div class="card">
-                <div class="card-header">
-                  <i class="fas fa-comment"></i>
-                  <h3>ANUNȚUL TĂU DE SAMSAR ADEVĂRAT</h3>
-                </div>
-                <p class="card-subtitle">
-                  Anunțul tău va apărea aici, gata de copiat și postat pe OLX!
-                  CLIENȚII VOR SUNA INSTANT!
-                </p>
+            <!-- ... (existing content before this remains unchanged) -->
 
-                <div id="resultContainer" class="result-container">
-                  <div id="emptyState" class="empty-state">
-                    <i class="fas fa-car"></i>
-                    <p>
-                      BAGĂ POZA CU BIJUTERIA ȘI APASĂ PE "GENEREAZĂ ANUNȚUL DE
-                      SAMSAR ACUM!!!"
-                    </p>
-                  </div>
+<!-- Result -->
+<div class="generator-result-container">
+  <div class="card">
+    <div class="card-header">
+      <i class="fas fa-comment"></i>
+      <h3>ANUNȚUL TĂU DE SAMSAR ADEVĂRAT</h3>
+    </div>
+    <p class="card-subtitle">
+      Anunțul tău va apărea aici, gata de copiat și postat pe OLX!
+      CLIENȚII VOR SUNA INSTANT!
+    </p>
 
-                  <div id="loadingState" class="loading-state hidden">
-                    <div class="spinner"></div>
-                    <p>
-                      GENERĂM UN ANUNȚ DE SAMSAR DE TOP... PREGĂTEȘTE-TE SĂ
-                      VINZI CA PÂINEA CALDĂ!
-                    </p>
-                  </div>
+    <div id="resultContainer" class="result-container">
+      <div id="emptyState" class="empty-state">
+        <i class="fas fa-car"></i>
+        <p>
+          BAGĂ POZA CU BIJUTERIA ȘI APASĂ PE "GENEREAZĂ ANUNȚUL DE
+          SAMSAR ACUM!!!"
+        </p>
+      </div>
 
-                  <div id="resultContent" class="result-content hidden">
-                    <div id="adTitle" class="ad-title"></div>
-                    <div id="adText" class="ad-text"></div>
+      <div id="loadingState" class="loading-state hidden">
+        <div class="spinner"></div>
+        <p>
+          GENERĂM UN ANUNȚ DE SAMSAR DE TOP... PREGĂTEȘTE-TE SĂ
+          VINZI CA PÂINEA CALDĂ!
+        </p>
+      </div>
 
-                    <div class="result-actions">
-                      <button id="copyBtn" class="btn btn-secondary">
-                        <i class="fas fa-copy"></i>
-                        COPIAZĂ
-                      </button>
-                      <button id="shareBtn" class="btn btn-secondary">
-                        <i class="fas fa-share-alt"></i>
-                        DISTRIBUIE
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <div id="resultContent" class="result-content hidden">
+        <div id="adTitle" class="ad-title"></div>
+        <div id="adText" class="ad-text"></div>
+
+        <div class="result-actions">
+          <button id="copyBtn" class="btn btn-secondary">
+            <i class="fas fa-copy"></i>
+            COPIAZĂ
+          </button>
+          <button id="shareBtn" class="btn btn-secondary">
+            <i class="fas fa-share-alt"></i>
+            DISTRIBUIE
+          </button>
+        </div>
+
+        <!-- NEW: Repaired Image Preview -->
+        <div class="card" id="repairedImageCard" style="margin-top: 2rem; display: none;">
+          <div class="card-header">
+            <i class="fas fa-wrench"></i>
+            <h3>REPARATĂ VIRTUAL 🔧</h3>
+          </div>
+          <p class="card-subtitle">Așa ar arăta bijuteria ta după o recondiționare digitală 👇</p>
+          <div class="image-preview">
+            <img id="repairedPreview" src="#" alt="Repaired car preview" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
             </div>
           </div>
         </div>
