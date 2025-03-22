@@ -12,6 +12,12 @@ document.getElementById("carForm").addEventListener("submit", async (e) => {
   const formData = new FormData();
   formData.append("image", image);
 
+  const promptText = document.getElementById("promptText").value;
+  const adStyle = document.getElementById("adStyle").value;
+
+  formData.append("promptText", promptText);
+  formData.append("adStyle", adStyle);
+
   document.getElementById("emptyState").classList.add("hidden");
   document.getElementById("resultContent").classList.add("hidden");
   document.getElementById("loadingState").classList.remove("hidden");
