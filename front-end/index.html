@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SamsarGPT - Generatorul de anunțuri care te face REGE pe OLX!</title>
+    <meta name="description" content="Creează anunțuri de samsar pentru mașina ta și vinde-o mai rapid pe OLX!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-background">
+                <div class="hero-animation-1"></div>
+                <div class="hero-animation-2"></div>
+            </div>
+            
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">RUPE PIAȚA PE OLX! 🚗💥</div>
+                    
+                    <h1 class="hero-title">
+                        Samsar<span class="text-highlight">GPT</span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        GENERATORUL DE ANUNȚURI CARE TE FACE REGE PE OLX! BAGI POZA, IESE ANUNȚ DE SAMSAR ADEVĂRAT!
+                    </p>
+                    
+                    <a href="#generator" class="btn btn-primary">
+                        <i class="fas fa-bolt"></i>
+                        BAGĂ POZA ȘI IA BANII!
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">DE CE SĂ FOLOSEȘTI SamsarGPT?</h2>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="feature-title">ECONOMISEȘTI TIMP ȘI BANI</h3>
+                        <p class="feature-description">Nu mai stai să scrii 3 ore la un anunț, că noi îți facem totul în câteva secunde. TIMP = BANI, FRATE!</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="feature-title">VÂNZARE RAPIDĂ GARANTATĂ</h3>
+                        <p class="feature-description">Anunțurile noastre sunt așa de BETON, că o să fii sunat în 5 minute după ce le pui! CLIENȚII VIN PE BANDĂ RULANTĂ!</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="feature-title">TITLURI CARE ATRAG PRIVIRI</h3>
+                        <p class="feature-description">FULL FULL OPTION EURO 6 IMPECABIL GERMANIA! Titluri care fac clientul să dea click INSTANT!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Generator Section -->
+        <section id="generator" class="generator">
+            <div class="container">
+                <h2 class="section-title">BAGĂ POZA ȘI IA BANII!</h2>
+                
+                <div class="generator-grid">
+                    <!-- Form -->
+                    <div class="generator-form-container">
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="fas fa-car"></i>
+                                <h3>BAGĂ POZA CU BIJUTERIA</h3>
+                            </div>
+                            <p class="card-subtitle">Încarcă o poză cu mașina și lasă AI-ul să facă magia! ANUNȚ DE SAMSAR ADEVĂRAT!</p>
+                            
+                            <!-- Image Uploader -->
+                            <div class="image-uploader-container">
+                                <label for="carImage" class="image-uploader-label">ÎNCARCĂ POZA CU BIJUTERIA PE ROȚI</label>
+                                <div id="imageUploader" class="image-uploader">
+                                    <div id="dropZone" class="drop-zone">
+                                        <input type="file" id="carImage" accept="image/*" class="file-input">
+                                        <div id="uploadPlaceholder" class="upload-placeholder">
+                                            <div class="upload-icon">
+                                                <i class="fas fa-upload"></i>
+                                            </div>
+                                            <p class="upload-title">TRAGE ȘI PLASEAZĂ POZA CU BIJUTERIA</p>
+                                            <p class="upload-subtitle">sau click pentru a selecta un fișier</p>
+                                            <p class="upload-formats">Suportă JPG, PNG, WEBP (max 10MB)</p>
+                                        </div>
+                                        <div id="imagePreview" class="image-preview hidden">
+                                            <img id="previewImg" src="#" alt="Car preview">
+                                            <button id="removeImage" class="remove-image" type="button">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <form id="carForm" class="car-form">
+                                <div class="form-group">
+                                    <label for="promptText">CE VREI SĂ ZICĂ ANUNȚUL? (OPȚIONAL)</label>
+                                    <textarea id="promptText" name="promptText" placeholder="Ex: Vreau să zici că e adusă din Germania, că are jante de aliaj și că merge ca un ceas elvețian..."></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="adStyle">STILUL ANUNȚULUI DE SAMSAR</label>
+                                    <select id="adStyle" name="adStyle">
+                                        <option value="exaggerated">EXAGERAT LA MAXIM (FULL OPTION!!!)</option>
+                                        <option value="desperate">DISPERAT SĂ VÂND (URGENT!!!)</option>
+                                        <option value="luxury">LUX FALS (EDITION LIMITATĂ!!!)</option>
+                                        <option value="honest">BRUTAL DE SINCER (RARITATE PE OLX)</option>
+                                        <option value="classic">SAMSAR CLASIC (CAPS LOCK OBLIGATORIU!!!)</option>
+                                    </select>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-generate" id="generateBtn">
+                                    <i class="fas fa-magic"></i>
+                                    GENEREAZĂ ANUNȚUL DE SAMSAR ACUM!!!
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- Result -->
+                    <div class="generator-result-container">
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="fas fa-comment"></i>
+                                <h3>ANUNȚUL TĂU DE SAMSAR ADEVĂRAT</h3>
+                            </div>
+                            <p class="card-subtitle">Anunțul tău va apărea aici, gata de copiat și postat pe OLX! CLIENȚII VOR SUNA INSTANT!</p>
+                            
+                            <div id="resultContainer" class="result-container">
+                                <div id="emptyState" class="empty-state">
+                                    <i class="fas fa-car"></i>
+                                    <p>BAGĂ POZA CU BIJUTERIA ȘI APASĂ PE "GENEREAZĂ ANUNȚUL DE SAMSAR ACUM!!!"</p>
+                                </div>
+                                
+                                <div id="loadingState" class="loading-state hidden">
+                                    <div class="spinner"></div>
+                                    <p>GENERĂM UN ANUNȚ DE SAMSAR DE TOP... PREGĂTEȘTE-TE SĂ VINZI CA PÂINEA CALDĂ!</p>
+                                </div>
+                                
+                                <div id="resultContent" class="result-content hidden">
+                                    <div id="adTitle" class="ad-title"></div>
+                                    <div id="adText" class="ad-text"></div>
+                                    
+                                    <div class="result-actions">
+                                        <button id="copyBtn" class="btn btn-secondary">
+                                            <i class="fas fa-copy"></i>
+                                            COPIAZĂ
+                                        </button>
+                                        <button id="shareBtn" class="btn btn-secondary">
+                                            <i class="fas fa-share-alt"></i>
+                                            DISTRIBUIE
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">CE SPUN SAMSARII ADEVĂRAȚI DESPRE NOI</h2>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-icon">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <p class="testimonial-quote">"Am vândut Loganul din 2006 în 3 ore după ce am pus anunțul generat de SamsarGPT. INCREDIBIL! Clientul nici n-a negociat prețul!"</p>
+                        <p class="testimonial-author">- Dorel din Craiova, SAMSAR DE 15 ANI</p>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-icon">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <p class="testimonial-quote">"Băi, nu credeam că merge, dar am primit 15 apeluri în prima zi pentru Golful meu. RECOMAND LA TOȚI BĂIEȚII DIN PARCARE!"</p>
+                        <p class="testimonial-author">- Viorel din București, VINDE 5 MAȘINI PE SĂPTĂMÂNĂ</p>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-icon">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <p class="testimonial-quote">"Am pus anunțul generat de SamsarGPT și am vândut BMW-ul cu 500 de euro în plus față de cât ceream inițial! BANI GRATIS, FRATE!"</p>
+                        <p class="testimonial-author">- Marcel din Cluj, REGELE SAMSARILOR DIN ARDEAL</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p class="copyright">© 2025 SamsarGPT - TOATE DREPTURILE REZERVATE</p>
+                <p class="disclaimer">Notă: Anunțurile generate sunt doar pentru amuzament. Folosește-le pe propriul risc! NU DERANJAȚI CU OFERTE RIDICOLE!!!</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
