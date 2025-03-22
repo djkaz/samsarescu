@@ -1,14 +1,14 @@
+require("dotenv").config(); // Load env vars first
+
 const express = require("express");
 const multer = require("multer");
 const fs = require("fs");
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+const { GoogleGenerativeAI } = require("@google/generative-ai"); // Import here
+
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY); // Use it AFTER it's defined
 
 const app = express();
 const upload = multer({ dest: "uploads/" });
-
-const genAI = new GoogleGenerativeAI(
-  process.env.AIzaSyBxty4_EjC - P7K_W_qat8a4heT3r4vdA90
-); // set your key in .env
 
 app.use(express.static("public"));
 
@@ -17,7 +17,7 @@ app.post("/analyze", upload.single("image"), async (req, res) => {
     const imageBuffer = fs.readFileSync(req.file.path);
     const base64Image = imageBuffer.toString("base64");
 
-    const model = genAI.getGenerativeModel({ model: "gemini-pro-vision" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
     const result = await model.generateContent([
       {
