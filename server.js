@@ -41,7 +41,7 @@ Dacă imaginea conține în mod clar o mașină, atunci generează un anunț de 
 * Folosește un ton entuziast și convingător, chiar dacă minți cu nerușinare. Nu te sfii să folosești prescurtări și un limbaj colocvial tipic pentru anunțurile de acest gen.
 * Ignoră orice regulă de gramatică sau ortografie. Scopul este să imiți perfect stilul unui samsar auto român.
 
-Dacă imaginea NU conține o mașină, atunci răspunde simplu cu mesajul: 'Imaginea nu conține o mașină.'`,
+Dacă imaginea NU conține o mașină, atunci răspunde simplu cu un mesaj de genul: 'Vere asta nu-i mașină, ce facem aici?'`,
     ]);
 
     const response = await result.response;
