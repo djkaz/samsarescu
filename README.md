@@ -1,15 +1,5 @@
 # SamsarGPT
 
-**Cuprins:**
-
-*   [Ce puteți face pe SamsarGPT?](#Ce-puteți-face-pe-SamsarGPT?-😎)
-*   [Cum să utilizați site-ul](#cum-sa-utilizati-site-ul)
-*   [Dezvoltări viitoare](#dezvoltari-viitoare)
-*   [Feedback](#feedback)
-*   [Prezentare](#prezentare)
-*   [Implementare](#implementare)
-*   [Structură Proiect](#structura-proiect)
-*   [Ghid pentru Rulare Locală](#ghid-pentru-rulare-locala)
 
 **Bine ați venit pe SamsarGPT!** 👋
 
