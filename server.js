@@ -94,7 +94,24 @@ app.post("/repair", upload.single("image"), async (req, res) => {
 
     const contents = [
       {
-        text: "Păstrează imaginea acestei mașini cât mai similară cu originalul în ceea ce privește modelul, culoarea și unghiul, dar repară-o complet și adu-o în stare perfectă. Vreau să văd exact aceeași mașină, dar fără rugină, fără zgârieturi, cu toate piesele lipsă sau deteriorate înlocuite, vopseaua impecabilă și un aspect general perfect. Asigură-te că se recunoaște că este aceeași mașină, doar într-o stare mult mai bună.",
+        text: `You are a skilled digital car restorer. Your task is to take an image of a car and restore it to perfect condition without altering its original model, color, angle, or the background.
+
+You will be provided with an image of a car: {image_of_car}
+
+Instructions:
+
+Carefully examine the provided image of the car. Identify the car's model, color, and the angle from which the picture was taken. Note the background details as well.
+
+Digitally restore the car to perfect condition. This includes:
+
+- Removing any rust and scratches.
+- Replacing any missing or damaged parts (e.g., bumpers, headlights, mirrors).
+- Repairing dents and other body damage.
+- Ensuring the paint is flawless and consistent with the original color.
+
+Maintain the original model, color, and angle of the car in the restored image. The restored car should be instantly recognizable as the same vehicle in the original image.
+
+Do not alter the car's model or color. Do not change the angle of the image or modify the background in any way. Keep the background exactly as it is in the original image. Focus solely on repairing damage and restoring the car to a pristine state.`,
       },
       {
         inlineData: {
