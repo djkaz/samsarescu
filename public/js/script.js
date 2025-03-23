@@ -32,8 +32,8 @@ document.getElementById("carForm").addEventListener("submit", async (e) => {
     const data = await response.json();
 
     if (data.description) {
-      document.getElementById("adTitle").textContent = "ANUNȚ GENERAT";
-      document.getElementById("adText").textContent = data.description;
+      document.getElementById("listingTitle").textContent = "ANUNȚ GENERAT";
+      document.getElementById("listingText").textContent = data.description;
 
       document.getElementById("loadingState").classList.add("hidden");
       document.getElementById("resultContent").classList.remove("hidden");
