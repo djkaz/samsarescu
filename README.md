@@ -147,3 +147,4 @@ Urmați acești pași pentru a rula aplicația local:
     *   Deschideți browserul web și navigați la adresa `http://localhost:3000` (sau adresa specificată în mesajul de pornire al serverului).
 
 Acum ar trebui să puteți utiliza aplicația SamsarGPT local.
+# test
