@@ -554,7 +554,7 @@ h6 {
   flex-direction: column;
 }
 
-.ad-title {
+.listing-title {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -562,7 +562,7 @@ h6 {
   color: var(--color-highlight);
 }
 
-.ad-text {
+.listing-text {
   background-color: var(--color-input-bg);
   border-radius: var(--border-radius);
   padding: 1.5rem;
@@ -644,6 +644,40 @@ h6 {
 .disclaimer {
   font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.5);
+}
+
+/* Buy Me a Coffee Button */
+.buy-me-coffee {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.btn-coffee {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffdd00;
+  color: #000000;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius-full);
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.btn-coffee i {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.btn-coffee:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  background-color: #ffe44d;
 }
 
 /* Utility Classes */
